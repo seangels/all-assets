@@ -1,5 +1,5 @@
 window.__env = {
-  production: false,
+  production: true,
   apiBaseUrl: "",
   currentUser: {
     userId: window.__ctx?.email,
