@@ -4,7 +4,7 @@ window.__env = {
   currentUser: {
     userId: window.__ctx?.email,
     userName: window.__ctx?.email,
-    accessCode: "dvit@123",
+    accessCode: "",
     fullName: window.__ctx?.email,
     email: window.__ctx?.email,
     permissions: [
