@@ -7,7 +7,7 @@
         [functionName](payload); // gọi hàm trong Code.gs
     });
   }
-  window._apiAppScript = function (functionName, payload) {
+  window._appScriptApi = function (functionName, payload) {
     return _apiAppScript_(functionName, payload)
       .then((res) => {
         console.log(`[real-api] ${functionName}`, {
