@@ -16,6 +16,8 @@
   }
   function bind() {
     document.getElementById("btn-create").onclick = function () {
+      data.oldId = data.id;
+      delete data.id;
       var sample = Object.assign({}, data || {});
       sample._createdAt = new Date().toISOString();
       google.script.run
