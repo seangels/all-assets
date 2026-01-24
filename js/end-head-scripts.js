@@ -22,10 +22,10 @@
     },
     initData: {
       newChangeRequestData: {
-        contextKey: "phieu-xuat",
-        changeType: "create",
-        objectRowIndexsString: "18",
-        objectIdsString: "PX-004",
+        contextKey: window.__ctx?.contextKey,
+        changeType: "update",
+        objectRowIndexsString: window.__data?.rowIndex,
+        objectIdsString: window.__data?.id,
       },
     },
   };

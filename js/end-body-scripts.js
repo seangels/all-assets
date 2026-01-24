@@ -4,7 +4,7 @@
       google.script.run
         .withSuccessHandler(resolve)
         .withFailureHandler(reject)
-        [functionName](payload); // gọi hàm trong Code.gs
+        ["libCall"](functionName, payload); // gọi hàm trong Code.gs
     });
   }
   window._appScriptApi = function (functionName, payload) {
