@@ -17,7 +17,10 @@
         return res;
       })
       .catch((error) => {
-        console.warn("[real-api] failed, falling back to remote API", error);
+        console.warn(`[real-api] ${functionName} failed, falling back to remote API`, {
+          payload,
+          error
+        });
         return error;
       });
   };
