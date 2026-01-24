@@ -12,7 +12,7 @@
       .then((res) => {
         console.log(`[real-api] ${functionName}`, {
           payload,
-          mockResult,
+          res,
         });
         return res;
       })
