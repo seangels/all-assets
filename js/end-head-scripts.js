@@ -3,7 +3,7 @@
   window.__env = {
     production: false,
     apiBaseUrl: "",
-    currentUser: JSON.stringify({
+    currentUser: {
       userId: window.__ctx?.email,
       userName: window.__ctx?.email,
       accessCode: "",
@@ -19,15 +19,15 @@
         { code: "change_request__popup-onSaveClick" },
         { code: "change_request__grid__toolbarItems-onTaoYC" },
       ],
-    }),
-    initData: JSON.stringify({
+    },
+    initData: {
       newChangeRequestData: {
         contextKey: "phieu-xuat",
         changeType: "create",
         objectRowIndexsString: "18",
         objectIdsString: "PX-004",
       },
-    }),
+    },
   };
 
   console.log("end injected.");
