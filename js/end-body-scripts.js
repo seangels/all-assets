@@ -1,4 +1,26 @@
 (function () {
+  function _apiAppScript_(functionName, payload) {
+    return new Promise((resolve, reject) => {
+      google.script.run
+        .withSuccessHandler(resolve)
+        .withFailureHandler(reject)
+        [functionName](payload); // gọi hàm trong Code.gs
+    });
+  }
+  window._apiAppScript = function (functionName, payload) {
+    return _apiAppScript_(functionName, payload)
+      .then((res) => {
+        console.log(`[real-api] ${functionName}`, {
+          payload,
+          mockResult,
+        });
+        return res;
+      })
+      .catch((error) => {
+        console.warn("[real-api] failed, falling back to remote API", error);
+        return error;
+      });
+  };
   var ctx = window.__ctx || {};
   var data = window.__data || {};
   var ctxBlock = document.getElementById("ctx-block");
