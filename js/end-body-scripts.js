@@ -21,7 +21,10 @@
           payload,
           error
         });
-        return error;
+        return {
+          ok: false,
+          error
+        };
       });
   };
   var ctx = window.__ctx || {};
