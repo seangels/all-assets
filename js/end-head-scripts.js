@@ -21,6 +21,7 @@
       ],
     },
     initData: {
+      sheetContexts: window.__ctx?.sheetContexts,
       newChangeRequestData: {
         contextKey: window.__ctx?.contextKey,
         changeType: "update",
