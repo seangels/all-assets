@@ -26,6 +26,8 @@
         changeType: "update",
         objectRowIndexsString: window.__data?.rowIndex,
         objectIdsString: window.__data?.id,
+        formItems: window.__ctx?.formItems || [],
+        originalData: window.__data
       },
     },
   };
